@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am currently a senior student majoring in Computer Science and Technology at the School of Computer Science, Central South University. Next year, I will become a joint Ph.D. student at Harbin Institute of Technology and the Shanghai Artificial Intelligence Laboratory. My primary research interests lie in AI for Science (AI4SCI), embodied intelligence, and medical image processing.
+I am currently a senior student majoring in Computer Science and Technology at the School of Computer Science, Central South University. Next year, I will become a joint Ph.D. student at Harbin Institute of Technology and [the Shanghai AI Laboratory](https://www.shlab.org.cn/). My primary research interests lie in AI for Science (AI4SCI), embodied intelligence, and medical image processing.
 
 If you are interested in connecting or discussing potential collaborations, feel free to email me.
 
@@ -27,7 +27,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 🔥 News
 
-- *2024.10*: &nbsp;🎉🎉 My first paper is accepted by BIBM2024. 
+- *2024.10*: &nbsp;🎉🎉 My first paper is accepted by BIBM2024.
 - *2024.09*: &nbsp;🎉🎉 Excited to join the Shanghai AI Laboratory as a PHD student in AI4Science.
 
 # 📝 Publications 
