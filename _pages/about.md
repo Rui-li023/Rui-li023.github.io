@@ -36,10 +36,11 @@ My research interest includes neural machine translation and computer vision. I 
 <div class='paper-box-text' markdown="1">
 
 **HFGS: High-Frequency Information Guided Net for Multi-Regions Pseudo-CT Synthesis**
+
 Rongchang Zhao, Jianyu Qi, <u>**Rui Li**<u>, Teng Yang, Jiaxu Li, Jian Zhang, and Zijian Zhang
+
 **IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2025.**
-<!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+
 </div>
 </div>
 
@@ -48,10 +49,10 @@ Rongchang Zhao, Jianyu Qi, <u>**Rui Li**<u>, Teng Yang, Jiaxu Li, Jian Zhang, an
 <div class='paper-box-text' markdown="1">
 
 **AIDC: Benchmark for Analytical Learning in Incremental Disease Classification**
+
 Rongchang Zhao, Jianyu Qi, <u>**Rui Li**<u>, Zhijie Zheng,Jian Zhang,Jiaxu Li
+
 **Under Review**
-<!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 </div>
 </div>
 
