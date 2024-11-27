@@ -37,7 +37,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 **HFGS: High-Frequency Information Guided Net for Multi-Regions Pseudo-CT Synthesis**
 
-Rongchang Zhao, Jianyu Qi, <u>**Rui Li**<u>, Teng Yang, Jiaxu Li, Jian Zhang, and Zijian Zhang
+Rongchang Zhao, Jianyu Qi, <u>**Rui Li**</u>, Teng Yang, Jiaxu Li, Jian Zhang, and Zijian Zhang
 
 **IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2025.**
 
@@ -50,7 +50,7 @@ Rongchang Zhao, Jianyu Qi, <u>**Rui Li**<u>, Teng Yang, Jiaxu Li, Jian Zhang, an
 
 **AIDC: Benchmark for Analytical Learning in Incremental Disease Classification**
 
-Rongchang Zhao, Jianyu Qi, <u>**Rui Li**<u>, Zhijie Zheng,Jian Zhang,Jiaxu Li
+Rongchang Zhao, Jianyu Qi, <u>**Rui Li**</u>, Zhijie Zheng,Jian Zhang,Jiaxu Li
 
 **Under Review**
 </div>
