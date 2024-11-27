@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am currently a senior student majoring in Computer Science and Technology at the School of Computer Science, Central South University. Next year, I will become a joint Ph.D. student at Harbin Institute of Technology and [the Shanghai AI Laboratory](https://www.shlab.org.cn/). My primary research interests lie in AI for Science (AI4SCI), embodied intelligence, and medical image processing.
+I am currently a senior student majoring in Computer Science and Technology at the School of Computer Science, Central South University. Next year, I will become a joint Ph.D. student at Harbin Institute of Technology and [Shanghai AI Laboratory](https://www.shlab.org.cn/). My primary research interests lie in AI for Science (AI4SCI), embodied intelligence, and medical image processing.
 
 If you are interested in connecting or discussing potential collaborations, feel free to email me.
 
@@ -35,10 +35,21 @@ My research interest includes neural machine translation and computer vision. I 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">BIBM 2024</div><img src='images/BIBM2024.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-HFGS: High-Frequency Information Guided Net for Multi-Regions Pseudo-CT Synthesis
+**HFGS: High-Frequency Information Guided Net for Multi-Regions Pseudo-CT Synthesis**
+Rongchang Zhao, Jianyu Qi, <u>**Rui Li**<u>, Teng Yang, Jiaxu Li, Jian Zhang, and Zijian Zhang
+**IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2025.**
+<!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
 
-Rongchang Zhao, Jianyu Qi, **Rui Li**, Teng Yang, Jiaxu Li, Jian Zhang, and Zijian Zhang
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/ICASSP2025.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**AIDC: Benchmark for Analytical Learning in Incremental Disease Classification**
+Rongchang Zhao, Jianyu Qi, <u>**Rui Li**<u>, Zhijie Zheng,Jian Zhang,Jiaxu Li
+**Under Review**
 <!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 </div>
