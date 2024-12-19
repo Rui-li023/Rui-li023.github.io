@@ -32,6 +32,33 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 📝 Publications 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/SegACIL.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**SegACIL: Solving the Stability-Plasticity Dilemma in Continual Semantic Segmentation**
+
+Jiaxu Li*, Songning Lai*, **<u>Rui Li*</u>**, Rongchang Zhao, Yutao Yue, Huiping Zhuang
+
+**Under review**
+
+[ArXiv](https://arxiv.org/abs/2412.10834)
+
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2025</div><img src='images/ICASSP2025.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**AIDC: Benchmark for Analytical Learning in Incremental Disease Classification**
+
+Rongchang Zhao, Jianyu Qi, **<u>Rui Li</u>**, Zhijie Zheng,Jian Zhang,Jiaxu Li
+
+**2025 IEEE International Conference on Acoustics, Speech, and Signal Processing**
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">BIBM 2024</div><img src='images/BIBM2024.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -39,23 +66,10 @@ My research interest includes neural machine translation and computer vision. I 
 
 Rongchang Zhao, Jianyu Qi, **<u>Rui Li</u>**, Teng Yang, Jiaxu Li, Jian Zhang, and Zijian Zhang
 
-**IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2025.**
+**IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2024.**
 
 </div>
 </div>
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/ICASSP2025.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-**AIDC: Benchmark for Analytical Learning in Incremental Disease Classification**
-
-Rongchang Zhao, Jianyu Qi, **<u>Rui Li</u>**, Zhijie Zheng,Jian Zhang,Jiaxu Li
-
-**Under Review**
-</div>
-</div>
-
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 <!-- # 🎖 Honors and Awards
