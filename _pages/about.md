@@ -32,7 +32,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/SegACIL.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/SegACIL.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **SegACIL: Solving the Stability-Plasticity Dilemma in Continual Semantic Segmentation**
