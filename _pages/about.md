@@ -37,7 +37,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 **SegACIL: Solving the Stability-Plasticity Dilemma in Continual Semantic Segmentation**
 
-Jiaxu Li*, Songning Lai*, **<u>Rui Li*</u>**, Rongchang Zhao, Yutao Yue, Huiping Zhuang
+Jiaxu Li*, Songning Lai*, **<u>Rui Li*</u>**, Di Fang, Kejia Fan, Jianheng Tang, Yuhan Zhao, Rongchang Zhao, Dongzhan Zhou, Yutao Yue, Huiping Zhuang
 
 **Under review**
 
