@@ -32,12 +32,14 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 📝 Publications 
 
+†: Corresponding Author , \*: Equal Contribution
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/SegACIL.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **SegACIL: Solving the Stability-Plasticity Dilemma in Continual Semantic Segmentation**
 
-Jiaxu Li*, Songning Lai*, **<u>Rui Li*</u>**, Di Fang, Kejia Fan, Jianheng Tang, Yuhan Zhao, Rongchang Zhao, Dongzhan Zhou, Yutao Yue, Huiping Zhuang
+**<u>Rui Li*</u>**, Jiaxu Li\*, Songning Lai\*, Di Fang, Kejia Fan, Jianheng Tang, Yuhan Zhao, Rongchang Zhao, Dongzhan Zhou, Yutao Yue, Huiping Zhuang†
 
 **Under review**
 
@@ -52,7 +54,7 @@ Jiaxu Li*, Songning Lai*, **<u>Rui Li*</u>**, Di Fang, Kejia Fan, Jianheng Tang,
 
 **AIDC: Benchmark for Analytical Learning in Incremental Disease Classification**
 
-Rongchang Zhao, Jianyu Qi, **<u>Rui Li</u>**, Zhijie Zheng,Jian Zhang,Jiaxu Li
+Rongchang Zhao, Jianyu Qi, **<u>Rui Li</u>**, Zhijie Zheng,Jian Zhang,Jiaxu Li†
 
 **2025 IEEE International Conference on Acoustics, Speech, and Signal Processing**
 </div>
@@ -64,7 +66,7 @@ Rongchang Zhao, Jianyu Qi, **<u>Rui Li</u>**, Zhijie Zheng,Jian Zhang,Jiaxu Li
 
 **HFGS: High-Frequency Information Guided Net for Multi-Regions Pseudo-CT Synthesis**
 
-Rongchang Zhao, Jianyu Qi, **<u>Rui Li</u>**, Teng Yang, Jiaxu Li, Jian Zhang, and Zijian Zhang
+Rongchang Zhao, Jianyu Qi, **<u>Rui Li</u>**, Teng Yang, Jiaxu Li, Jian Zhang, and Zijian Zhang†
 
 **IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2024.**
 
