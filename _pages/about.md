@@ -27,7 +27,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 🔥 News
 
-- *2025.04*: &nbsp;🎉🎉 Our paper "CFSSeg: Closed-Form Solution for Class-Incremental Semantic Segmentation" is accepted by ACM MM 2025!
+- *2025.07*: &nbsp;🎉🎉 Our paper "CFSSeg" is accepted by ACM MM 2025!
 - *2024.10*: &nbsp;🎉🎉 My first paper is accepted by BIBM2024.
 - *2024.09*: &nbsp;🎉🎉 Excited to join the Shanghai AI Laboratory as a PHD student in AI4Science.
 
@@ -55,7 +55,7 @@ Jiaxu Li*, **<u>Rui Li*</u>**, Jianyu Qi, Songning Lai, Linpu Lv, Kejia Fan, Jia
 
 **LabUtopia: High-Fidelity Simulation and Hierarchical Benchmark for Scientific Embodied Agents**
 
-**<u>Rui Li*</u>**, Zixuan Hu*, Wenxi Qu*, Jinouwen Zhang, Zhenfei Yin, Sha Zhang, Xuantuo Huang, Hanqing Wang, Tai Wang, Jiangmiao Pang, Wanli Ouyang, Lei Bai, Wangmeng Zuo, Ling-Yu Duan, Dongzhan Zhou, Shixiang Tang†, Lei Bai†, Wangmeng Zuo†
+**<u>Rui Li*</u>**, Zixuan Hu*, Wenxi Qu*, Jinouwen Zhang, Zhenfei Yin, Sha Zhang, Xuantuo Huang, Hanqing Wang, Tai Wang, Jiangmiao Pang, Wanli Ouyang, Lei Bai, Wangmeng Zuo, Ling-Yu Duan†, Dongzhan Zhou†, Shixiang Tang†
 
 **Under review**
 
