@@ -40,7 +40,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 **CFSSeg: Closed-Form Solution for Class-Incremental Semantic Segmentation of 2D Images and 3D Point Clouds**
 
-<u>Jiaxu Li*</u>, **<u>Rui Li*</u>**, Jianyu Qi, Songning Lai, Linpu Lv, Kejia Fan, Jianheng Tang, Yutao Yue, Dongzhan Zhou, Yuanhuai Liu, Huiping Zhuang†
+Jiaxu Li*, **<u>Rui Li*</u>**, Jianyu Qi, Songning Lai, Linpu Lv, Kejia Fan, Jianheng Tang, Yutao Yue, Dongzhan Zhou, Yuanhuai Liu, Huiping Zhuang†
 
 **ACM International Conference on Multimedia (ACM MM), 2025**
 
@@ -50,16 +50,16 @@ My research interest includes neural machine translation and computer vision. I 
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/SegACIL.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/labutopia.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **LabUtopia: High-Fidelity Simulation and Hierarchical Benchmark for Scientific Embodied Agents**
 
-**<u>Rui Li*</u>**, <u>Zixuan Hu*</u>, <u>Wenxi Qu*</u>, Jinouwen Zhang, Zhenfei Yin, Sha Zhang, Xuantuo Huang, Hanqing Wang, Tai Wang, Jiangmiao Pang, Wanli Ouyang, Lei Bai, Wangmeng Zuo, Ling-Yu Duan, Dongzhan Zhou, Shixiang Tang†, Lei Bai†, Wangmeng Zuo†
+**<u>Rui Li*</u>**, Zixuan Hu*, Wenxi Qu*, Jinouwen Zhang, Zhenfei Yin, Sha Zhang, Xuantuo Huang, Hanqing Wang, Tai Wang, Jiangmiao Pang, Wanli Ouyang, Lei Bai, Wangmeng Zuo, Ling-Yu Duan, Dongzhan Zhou, Shixiang Tang†, Lei Bai†, Wangmeng Zuo†
 
 **Under review**
 
-[ArXiv](https://arxiv.org/abs/2505.22634) | [Website](https://rui-li023.github.io/labutopia-site/)
+[Paper](https://arxiv.org/abs/2505.22634) \| [Website](https://rui-li023.github.io/labutopia-site/)
 
 </div>
 </div>
