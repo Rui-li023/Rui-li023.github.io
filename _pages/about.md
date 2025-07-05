@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am currently a senior student majoring in Computer Science and Technology at the School of Computer Science, Central South University. Next year, I will become a joint Ph.D. student at Harbin Institute of Technology and [Shanghai AI Laboratory](https://www.shlab.org.cn/). My primary research interests lie in AI for Science (AI4SCI), embodied intelligence, and medical image processing.
+I graduated from Central South University with a degree in Computer Science and Technology. I am currently a first-year joint Ph.D. student at Harbin Institute of Technology and [Shanghai AI Laboratory](https://www.shlab.org.cn/). My primary research interests lie in AI for Science (AI4SCI), Embodied AI.
 
 If you are interested in connecting or discussing potential collaborations, feel free to email me.
 
@@ -27,6 +27,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 🔥 News
 
+- *2025.04*: &nbsp;🎉🎉 Our paper "CFSSeg: Closed-Form Solution for Class-Incremental Semantic Segmentation" is accepted by ACM MM 2025!
 - *2024.10*: &nbsp;🎉🎉 My first paper is accepted by BIBM2024.
 - *2024.09*: &nbsp;🎉🎉 Excited to join the Shanghai AI Laboratory as a PHD student in AI4Science.
 
@@ -34,16 +35,31 @@ My research interest includes neural machine translation and computer vision. I 
 
 †: Corresponding Author , \*: Equal Contribution
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2025</div><img src='images/SegACIL.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**CFSSeg: Closed-Form Solution for Class-Incremental Semantic Segmentation of 2D Images and 3D Point Clouds**
+
+<u>Jiaxu Li*</u>, **<u>Rui Li*</u>**, Jianyu Qi, Songning Lai, Linpu Lv, Kejia Fan, Jianheng Tang, Yutao Yue, Dongzhan Zhou, Yuanhuai Liu, Huiping Zhuang†
+
+**ACM International Conference on Multimedia (ACM MM), 2025**
+
+[ArXiv](https://arxiv.org/abs/2412.10834)
+
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/SegACIL.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-**SegACIL: Solving the Stability-Plasticity Dilemma in Continual Semantic Segmentation**
+**LabUtopia: High-Fidelity Simulation and Hierarchical Benchmark for Scientific Embodied Agents**
 
-**<u>Rui Li*</u>**, Jiaxu Li\*, Songning Lai\*, Di Fang, Kejia Fan, Jianheng Tang, Yuhan Zhao, Rongchang Zhao, Dongzhan Zhou, Yutao Yue, Huiping Zhuang†
+**<u>Rui Li*</u>**, <u>Zixuan Hu*</u>, <u>Wenxi Qu*</u>, Jinouwen Zhang, Zhenfei Yin, Sha Zhang, Xuantuo Huang, Hanqing Wang, Tai Wang, Jiangmiao Pang, Wanli Ouyang, Lei Bai, Wangmeng Zuo, Ling-Yu Duan, Dongzhan Zhou, Shixiang Tang†, Lei Bai†, Wangmeng Zuo†
 
 **Under review**
 
-[ArXiv](https://arxiv.org/abs/2412.10834)
+[ArXiv](https://arxiv.org/abs/2505.22634) | [Website](https://rui-li023.github.io/labutopia-site/)
 
 </div>
 </div>
@@ -80,7 +96,8 @@ Rongchang Zhao, Jianyu Qi, **<u>Rui Li</u>**, Teng Yang, Jiaxu Li, Jian Zhang, a
 
 # 📖 Educations
 
-- *2021.09 - 2025.07 (now)*, Computer Science And Engineering, Central South University, Changsha, China.
+- *2021.09 - 2025.07*, Computer Science And Engineering, Central South University, Changsha, China.
+- *2025.09 - present*, Joint Ph.D. Student, Harbin Institute of Technology & Shanghai AI Laboratory, China.
 
 <!-- # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
