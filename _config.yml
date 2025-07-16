@@ -23,12 +23,12 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Rui Li (李锐)"
   avatar           : "images/myphoto.jpg"
-  bio              : "Central South University"
-  location         : "Changsha, China"
+  bio              : "Harbin Institute of Technology & Shanghai AI Laboratory Joint Ph.D. Student"
+  location         : "China"
   employer         : 
   pubmed           : 
   googlescholar    : 
-  email            : "rui.li@csu.edu.cn"
+  email            : "lirui.work0@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              : "https://atoposlibra.top"
   bitbucket        :
