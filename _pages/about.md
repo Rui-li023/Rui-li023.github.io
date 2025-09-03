@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I graduated from Central South University with a degree in Computer Science and Technology. I am currently a first-year joint Ph.D. student at Harbin Institute of Technology and [Shanghai AI Laboratory](https://www.shlab.org.cn/). My primary research interests lie in AI for Science (AI4SCI), Embodied AI.
+I graduated from Central South University with a degree in Computer Science and Technology. I am currently a first-year joint Ph.D. student at Harbin Institute of Technology and [Shanghai AI Laboratory](https://www.shlab.org.cn/), supervised by [Wangmeng Zuo](https://homepage.hit.edu.cn/wangmengzuo) and [Dongzhan Zhou](https://scholar.google.com/citations?user=Ox6SxpoAAAAJ). My primary research interests lie in AI for Science (AI4SCI), Embodied AI.
 
 If you are interested in connecting or discussing potential collaborations, feel free to email me.
 
