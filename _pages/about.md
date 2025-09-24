@@ -27,6 +27,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 🔥 News
 
+- *2025.09*: &nbsp;🎉🎉 Our paper "LabUtopia" is accepted by NeurIPS 2025!
 - *2025.07*: &nbsp;🎉🎉 Our paper "CFSSeg" is accepted by ACM MM 2025!
 - *2024.10*: &nbsp;🎉🎉 My first paper is accepted by BIBM2024.
 - *2024.09*: &nbsp;🎉🎉 Excited to join the Shanghai AI Laboratory as a PHD student in AI4Science.
@@ -34,6 +35,21 @@ My research interest includes neural machine translation and computer vision. I 
 # 📝 Publications 
 
 †: Corresponding Author , \*: Equal Contribution
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/labutopia.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**LabUtopia: High-Fidelity Simulation and Hierarchical Benchmark for Scientific Embodied Agents**
+
+**<u>Rui Li*</u>**, Zixuan Hu*, Wenxi Qu*, Jinouwen Zhang, Zhenfei Yin, Sha Zhang, Xuantuo Huang, Hanqing Wang, Tai Wang, Jiangmiao Pang, Wanli Ouyang, Lei Bai, Wangmeng Zuo, Ling-Yu Duan†, Dongzhan Zhou†, Shixiang Tang†
+
+**NeurIPS 2025 Dataset and Benchmark Track**
+
+[Paper](https://arxiv.org/abs/2505.22634) \| [Website](https://rui-li023.github.io/labutopia-site/) \| [Code](https://github.com/Rui-li023/LabUtopia) \| [Dataset](https://huggingface.co/datasets/Ruinwalker/LabUtopia-Dataset)
+
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2025</div><img src='images/SegACIL.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -45,21 +61,6 @@ Jiaxu Li*, **<u>Rui Li*</u>**, Jianyu Qi, Songning Lai, Linpu Lv, Kejia Fan, Jia
 **ACM International Conference on Multimedia (ACM MM), 2025**
 
 [ArXiv](https://arxiv.org/abs/2412.10834)
-
-</div>
-</div>
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='images/labutopia.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-**LabUtopia: High-Fidelity Simulation and Hierarchical Benchmark for Scientific Embodied Agents**
-
-**<u>Rui Li*</u>**, Zixuan Hu*, Wenxi Qu*, Jinouwen Zhang, Zhenfei Yin, Sha Zhang, Xuantuo Huang, Hanqing Wang, Tai Wang, Jiangmiao Pang, Wanli Ouyang, Lei Bai, Wangmeng Zuo, Ling-Yu Duan†, Dongzhan Zhou†, Shixiang Tang†
-
-**Under review**
-
-[Paper](https://arxiv.org/abs/2505.22634) \| [Website](https://rui-li023.github.io/labutopia-site/)
 
 </div>
 </div>
