@@ -27,6 +27,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 🔥 News
 
+- *2026.05*: &nbsp;🎉🎉 Our paper "LabBuilder" is accepted by ICML 2026!
 - *2025.09*: &nbsp;🎉🎉 Our paper "LabUtopia" is accepted by NeurIPS 2025!
 - *2025.07*: &nbsp;🎉🎉 Our paper "CFSSeg" is accepted by ACM MM 2025!
 - *2024.10*: &nbsp;🎉🎉 My first paper is accepted by BIBM2024.
@@ -36,6 +37,34 @@ My research interest includes neural machine translation and computer vision. I 
 
 †: Corresponding Author , \*: Equal Contribution
 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2026</div><img src='images/labbuilder.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**LabBuilder: Protocol-Grounded 3D Layout Generation for Interactable and Safe Laboratory**
+
+Jianbao Cao, Zhangrui Zhao, Bohan Feng, Zixuan Hu, **<u>Rui Li</u>**, Haiyuan Wan, Chenxi Li, Jingyuan Li, Wenzhe Cai, Lei Bai, Wanli Ouyang, Lingyu Duan, Di Huang, Mingting Pan, Sha Zhang, Xinzhu Ma, Shixiang Tang†, Dongzhan Zhou†
+
+**International Conference on Machine Learning (ICML), 2026**
+
+[ArXiv](https://arxiv.org/abs/2605.02288)
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/coenv.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**CoEnv: Driving Embodied Multi-Agent Collaboration via Compositional Environment**
+
+Li Kang, Yutao Fan, **<u>Rui Li</u>**, Heng Zhou, Yiran Qin, Zhemeng Zhang, Songtao Huang, Xiufeng Song, Zaibin Zhang, Bruno N.Y. Chen, Zhenfei Yin, Dongzhan Zhou, Wangmeng Zuo, Lei Bai
+
+**Preprint, 2026**
+
+[ArXiv](https://arxiv.org/abs/2604.05484) \| [Website](https://faceong.github.io/CoEnv/)
+
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/labutopia.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
