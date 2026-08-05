@@ -27,6 +27,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 🔥 News
 
+- *2026.08*: &nbsp;🎉🎉 The N₀ series technical reports (N₀-Foundation, N₀-VTLA, N₀-TWAM) are released!
 - *2026.05*: &nbsp;🎉🎉 Our paper "LabBuilder" is accepted by ICML 2026!
 - *2025.09*: &nbsp;🎉🎉 Our paper "LabUtopia" is accepted by NeurIPS 2025!
 - *2025.07*: &nbsp;🎉🎉 Our paper "CFSSeg" is accepted by ACM MM 2025!
@@ -37,6 +38,54 @@ My research interest includes neural machine translation and computer vision. I 
 
 †: Corresponding Author , \*: Equal Contribution
 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report</div><img src='images/n0-foundation.webp' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**N₀-Foundation: Towards the Age of Tactile Intelligence**
+
+**<u>Rui Li</u>** (Core Contributor), NeoteAI Team, Fudan TEAI Team
+
+**Technical Report, 2026**
+
+A tactile-centric foundation for embodied manipulation that unifies scalable tactile hardware, 30,000+ hours of multimodal data across six embodiments, transferable tactile representations, and standardized real-world and simulated benchmarks.
+
+[Paper](https://research.neoteai.com/assets/n0-foundation-report.pdf) \| [Homepage](https://research.neoteai.com/n0-foundation/) \| [Code](https://github.com/neoteai/N0-Foundation) \| [Dataset](https://huggingface.co/datasets/NeoteAIEmbodied/OpenNeoData)
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report</div><img src='images/n0-vtla.webp' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**N₀-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens**
+
+**<u>Rui Li</u>** (Data Processing), NeoteAI Team, Fudan TEAI Team
+
+**Technical Report, 2026**
+
+A vision-tactile-language-action foundation model for contact-rich manipulation that predicts future tactile tokens and improves offline from demonstrations, failures, human corrections, and recoveries.
+
+[Paper](https://research.neoteai.com/assets/n0-vtla-report.pdf) \| [Homepage](https://research.neoteai.com/n0-vtla/) \| [Code](https://github.com/neoteai/N0-VTLA) \| [Checkpoints](https://github.com/neoteai/N0-VTLA)
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report</div><img src='images/n0-twam.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**N₀-TWAM: Scaling Tactile-Native World Action Model for Contact-Rich Manipulation**
+
+**<u>Rui Li</u>** (Pretraining), NeoteAI Team, Fudan TEAI Team
+
+**Technical Report, 2026**
+
+A tactile-native world-action model that jointly predicts future vision, touch, and action, combining anticipatory and observed tactile pathways for contact-rich manipulation.
+
+[Paper](https://research.neoteai.com/assets/n0-twam-report.pdf) \| [Homepage](https://research.neoteai.com/n0-twam/) \| [Code](https://github.com/neoteai/N0-TWAM) \| [Checkpoints](https://github.com/neoteai/N0-TWAM)
+
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2026</div><img src='images/labbuilder.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
