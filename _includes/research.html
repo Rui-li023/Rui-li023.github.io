@@ -1,0 +1,32 @@
+{% assign rs = site.data.research %}
+{% if rs and rs.enabled and rs.keystone %}
+<section class="research" id="research">
+  <h1 class="research__title">🧭 Research</h1>
+
+  {% if rs.intro %}
+    <p class="research__intro">{{ rs.intro | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+  {% endif %}
+
+  <div class="arch">
+    <div class="arch__keystone">
+      {% if rs.keystone.label %}<span class="arch__label">{{ rs.keystone.label }}</span>{% endif %}
+      <h3 class="arch__heading">{{ rs.keystone.title }}</h3>
+      {% if rs.keystone.text %}<p class="arch__text">{{ rs.keystone.text }}</p>{% endif %}
+    </div>
+
+    {% if rs.pillars and rs.pillars.size > 0 %}
+      <div class="arch__link arch__link--{{ rs.pillars.size }}" aria-hidden="true"></div>
+
+      <div class="arch__pillars" style="--pillars: {{ rs.pillars.size }}">
+        {% for pillar in rs.pillars %}
+          <div class="arch__pillar">
+            {% if pillar.label %}<span class="arch__label">{{ pillar.label }}</span>{% endif %}
+            <h3 class="arch__heading">{{ pillar.title }}</h3>
+            {% if pillar.text %}<p class="arch__text">{{ pillar.text }}</p>{% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

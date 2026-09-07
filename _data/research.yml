@@ -1,0 +1,25 @@
+# The "Research" arch diagram: one keystone on top, pillars underneath.
+#
+# NOTE: the wording below is a DRAFT that Claude derived from the publication
+# list on this page. It is your research agenda, so rewrite it in your own
+# words — nothing here is quoted from anywhere.
+#
+# Set `enabled: false` to hide the whole section.
+# Editing this file does NOT require restarting `jekyll serve`.
+
+enabled: true
+
+intro: "My work builds toward **embodied agents that can actually run experiments** — grounded in realistic environments, and closed by contact-rich control."
+
+keystone:
+  label: "Keystone"
+  title: "Embodied Agents for Scientific Discovery"
+  text: "Agents that perceive, plan and manipulate inside real laboratories, turning written protocols into executed experiments."
+
+pillars:
+  - label: "Left Pillar"
+    title: "Simulation & Benchmarks"
+    text: "High-fidelity, protocol-grounded environments and hierarchical benchmarks that make scientific embodiment measurable — LabUtopia, LabBuilder, CoEnv."
+  - label: "Right Pillar"
+    title: "Multimodal Manipulation Policies"
+    text: "Tactile-centric representations, vision-tactile-language-action models and world models for contact-rich manipulation — the N₀ series."

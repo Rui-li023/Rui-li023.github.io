@@ -1,0 +1,10 @@
+<div class="paper-box-image"><div class="paper-media-frame">
+  <div class="badge">{{ include.badge }}</div>
+  {% if include.video %}
+  <video class="paper-media" data-src="{{ include.video | relative_url }}" poster="{{ include.poster | relative_url }}" muted loop playsinline preload="none" aria-label="{{ include.alt | escape }}"></video>
+  {% else %}
+  <a class="paper-figure-link" href="{{ include.original | relative_url }}" aria-label="View full-size figure: {{ include.name | escape }}">
+    <img src="{{ include.poster | relative_url }}" srcset="{{ include.small | relative_url }} 400w, {{ include.poster | relative_url }} {{ include.width }}w" sizes="(min-width: 768px) 340px, (min-width: 480px) 400px, 85vw" alt="{{ include.alt | escape }}" width="{{ include.width }}" height="{{ include.height }}" loading="lazy" decoding="async">
+  </a>
+  {% endif %}
+</div></div>

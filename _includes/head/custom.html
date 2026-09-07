@@ -1,3 +1,21 @@
+<meta name="color-scheme" content="light dark">
+
+<script>
+/* Resolve the colour theme before first paint so dark mode never flashes white. */
+(function () {
+  var root = document.documentElement;
+  var mode = 'system';
+  try {
+    var stored = window.localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark' || stored === 'system') { mode = stored; }
+  } catch (e) { /* storage blocked, fall back to system */ }
+  var dark = mode === 'dark' || (mode === 'system' &&
+    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  root.setAttribute('data-theme', dark ? 'dark' : 'light');
+  root.setAttribute('data-theme-mode', mode);
+})();
+</script>
+
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.jpg">
 <!-- <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"> -->
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon16x16.png">

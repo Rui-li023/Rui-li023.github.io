@@ -1,0 +1,1589 @@
+/* ==========================================================================
+   GLASS
+   The site's design layer: theme tokens, panels and their interactive states.
+
+   The page is one flat colour with white panels on top — no gradients. The
+   only real backdrop blur left is the sticky masthead and the badge that sits
+   over a paper's cover, where there is actually something behind to blur.
+
+   Imported last from main.scss so it can override the Minimal Mistakes
+   defaults without editing the vendored partials.
+   ========================================================================== */
+
+/*
+   Theme tokens
+   ========================================================================== */
+
+/* One flat page colour, white panels on top. No gradients. */
+:root {
+  color-scheme: light;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+
+  --bg-base: #f5f6f8;
+
+  --glass-bg: rgba(255, 255, 255, 0.92);
+  --glass-bg-strong: rgba(255, 255, 255, 0.97);
+  --glass-bg-soft: rgba(17, 24, 39, 0.04);
+  --glass-line: rgba(17, 24, 39, 0.09);
+  --glass-edge: rgba(17, 24, 39, 0.16);
+  --glass-blur: 14px;
+  --glass-shadow: 0 1px 2px rgba(16, 24, 40, 0.04),
+    0 8px 22px rgba(16, 24, 40, 0.05);
+  --glass-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --glass-shadow-lg: 0 2px 4px rgba(16, 24, 40, 0.05),
+    0 14px 34px rgba(16, 24, 40, 0.09);
+
+  --text-1: #16202c;
+  --text-2: #55616f;
+  --text-3: #838e9b;
+
+  --accent: #2a63c4;
+  --accent-strong: #1c4da3;
+  --accent-soft: rgba(42, 99, 196, 0.09);
+  --accent-line: rgba(42, 99, 196, 0.4);
+
+  --spotlight: rgba(42, 99, 196, 0.055);
+  --radius-card: 16px;
+  --radius-sm: 10px;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-base: #0d1117;
+
+  --glass-bg: rgba(22, 28, 38, 0.92);
+  --glass-bg-strong: rgba(22, 28, 38, 0.97);
+  --glass-bg-soft: rgba(255, 255, 255, 0.045);
+  --glass-line: rgba(255, 255, 255, 0.09);
+  --glass-edge: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 22px rgba(0, 0, 0, 0.26);
+  --glass-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --glass-shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.3), 0 14px 34px rgba(0, 0, 0, 0.4);
+
+  --text-1: #e6ecf3;
+  --text-2: #9daabb;
+  --text-3: #78838f;
+
+  --accent: #7fb2ff;
+  --accent-strong: #a3c8ff;
+  --accent-soft: rgba(127, 178, 255, 0.13);
+  --accent-line: rgba(127, 178, 255, 0.45);
+
+  --spotlight: rgba(127, 178, 255, 0.05);
+}
+
+/*
+   Base surface
+   ========================================================================== */
+
+html {
+  background-color: var(--bg-base);
+}
+
+body {
+  background: transparent;
+  color: var(--text-1);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Only animate colours while a theme switch is in flight, so the page does
+   not lag on every unrelated hover. */
+html.theme-anim,
+html.theme-anim body,
+html.theme-anim * {
+  transition: background-color 0.35s ease, border-color 0.35s ease,
+    color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/*
+   Glass surface primitives
+   ========================================================================== */
+
+%glass-surface {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-line);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-card {
+  @extend %glass-surface;
+  position: relative;
+  isolation: isolate;
+  border-radius: var(--radius-card);
+  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.35s ease, border-color 0.35s ease;
+
+  /* Cursor spotlight. Painted above the panel background, below the text. */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: radial-gradient(
+      320px circle at var(--mx, 50%) var(--my, 0%),
+      var(--spotlight),
+      transparent 68%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    box-shadow: var(--glass-shadow-lg);
+    border-color: var(--accent-line);
+    transform: translateY(-2px);
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+/*
+   Masthead
+   ========================================================================== */
+
+.masthead {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(14px) saturate(170%);
+          backdrop-filter: blur(14px) saturate(170%);
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease,
+    border-color 0.3s ease, padding 0.3s ease;
+
+  &--scrolled {
+    background: var(--glass-bg-strong);
+    border-bottom-color: var(--glass-line);
+    box-shadow: var(--glass-shadow-sm);
+  }
+
+  &__inner-wrap {
+    position: relative;
+    padding: 0.55em 0.5em;
+    padding-right: 3.5em;
+    font-family: var(--font-sans);
+  }
+}
+
+.greedy-nav {
+  background: transparent;
+
+  a {
+    margin: 0 0.15rem;
+    padding: 0.45rem 0.7rem;
+    border-radius: 999px;
+    color: var(--text-2);
+    font-size: 0.95em;
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    transition: color 0.25s ease, background-color 0.25s ease;
+
+    &:hover {
+      color: var(--accent);
+      background-color: var(--accent-soft);
+    }
+  }
+
+  .visible-links {
+    li:first-child a {
+      margin-left: 0;
+      color: var(--text-1);
+      font-weight: 700;
+    }
+
+    a {
+      &::before {
+        left: 0.7rem;
+        right: 0.7rem;
+        bottom: 0.1rem;
+        width: auto;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--accent);
+        transform-origin: center;
+      }
+
+      &.is-active {
+        color: var(--accent);
+        background-color: var(--accent-soft);
+
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  button {
+    right: 0;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.45rem 0.55rem;
+    border-radius: 999px;
+    background-color: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  .navicon,
+  .navicon::before,
+  .navicon::after {
+    background: var(--accent);
+  }
+
+  .hidden-links {
+    @extend %glass-surface;
+    border-radius: var(--radius-sm);
+    background: var(--glass-bg-strong);
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    li {
+      border-bottom-color: var(--glass-line);
+    }
+
+    a {
+      border-radius: 0;
+      color: var(--text-1);
+
+      &:hover {
+        color: var(--accent);
+        background: var(--accent-soft);
+      }
+    }
+  }
+}
+
+/*
+   Theme toggle
+   ========================================================================== */
+
+.theme-toggle {
+  @extend %glass-surface;
+  position: absolute;
+  top: 50%;
+  right: 0.5em;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3em;
+  height: 2.3em;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--glass-bg-soft);
+  box-shadow: none;
+  color: var(--text-2);
+  font-size: 1em;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.25s ease, background-color 0.25s ease,
+    border-color 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-color: var(--accent-line);
+    transform: translateY(-50%) scale(1.06);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  i {
+    pointer-events: none;
+  }
+}
+
+/*
+   Layout — single column, the hero carries the profile
+   ========================================================================== */
+
+/* Susy floats .page and everything inside it. Unfloating .page for the
+   single-column layout removed the block formatting context that used to
+   contain those inner floats, so .page collapsed to zero height and the
+   sections after it (Collaborators) were laid out from the top of #main —
+   an invisible full-height heading box then sat over the papers and ate
+   every mouse event, which is why the text could not be selected.
+   Unfloat the whole chain, and keep flow-root as a belt-and-braces. */
+.page {
+  display: flow-root;
+
+  @include breakpoint($large) {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page__inner-wrap,
+  .page__content {
+    float: none;
+    width: 100%;
+  }
+}
+
+/*
+   Hero
+   ========================================================================== */
+
+.hero {
+  @extend .glass-card;
+  padding: 1.6em 1.5em 1.2em;
+  margin-bottom: 1.6em;
+
+  @include breakpoint($medium) {
+    padding: 2em 2em 1.4em;
+  }
+}
+
+.hero__main {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 1.3em;
+
+  @include breakpoint($medium) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2.2em;
+  }
+}
+
+.hero__text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.hero__name {
+  margin: 0 0 0.45em;
+  color: var(--text-1);
+  font-size: 2.05em;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+
+  /* Neutralise the global anchor-offset hack for this heading. */
+  &::before {
+    display: none;
+  }
+}
+
+.hero__name-alt {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hero__affiliations {
+  margin: 0 0 0.9em;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25em 0.55em;
+    margin-bottom: 0.4em;
+    line-height: 1.4;
+  }
+}
+
+/* Fixed-width tile so the institution names line up whatever the logo's
+   aspect ratio. The marks ship as white silhouettes, so light mode inverts
+   them and dark mode uses them as they are. */
+.hero__logo {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 30px;
+  padding: 4px 5px;
+  border: 1px solid var(--glass-line);
+  border-radius: 9px;
+  background: var(--glass-bg-soft);
+  color: var(--text-3);
+  font-size: 0.8em;
+
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  /* A logo that ships only as a white silhouette has to be flipped for the
+     light theme; full-colour logos are left alone. */
+  &--mono img {
+    filter: invert(1);
+    opacity: 0.85;
+  }
+}
+
+:root[data-theme="dark"] .hero__logo {
+  img {
+    filter: brightness(1.35) saturate(1.05);
+  }
+
+  &--mono img {
+    filter: none;
+    opacity: 0.92;
+  }
+}
+
+.hero__org {
+  color: var(--text-1);
+  font-size: 0.97em;
+  font-weight: 600;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent-line);
+    }
+  }
+}
+
+.hero__role {
+  padding: 0.1em 0.55em;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.79em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.hero__period {
+  color: var(--text-3);
+  font-size: 0.82em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.hero__tagline {
+  display: inline-block;
+  margin: 0 0 0.9em;
+  padding: 0.25em 0.75em;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.86em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.hero__bio {
+  strong {
+    color: var(--text-1);
+    font-weight: 700;
+  }
+
+  p {
+    margin-bottom: 0.7em;
+    color: var(--text-2);
+    font-size: 1em;
+    line-height: 1.72;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-line);
+
+    &:hover {
+      color: var(--accent-strong);
+      border-bottom-color: var(--accent-strong);
+    }
+  }
+}
+
+.hero__portrait {
+  flex: 0 0 auto;
+
+  img {
+    display: block;
+    width: 108px;
+    height: 108px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid var(--glass-line);
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1),
+      box-shadow 0.45s ease;
+
+    @include breakpoint($medium) {
+      width: 142px;
+      height: 142px;
+    }
+
+    &:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: var(--glass-shadow-lg);
+    }
+  }
+}
+
+.hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4em 0.5em;
+  margin-top: 1.25em;
+  padding-top: 1em;
+  border-top: 1px solid var(--glass-line);
+
+  a,
+  .hero__meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.32em 0.7em;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 0.87em;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  a {
+    color: var(--accent);
+    transition: background-color 0.22s ease, border-color 0.22s ease,
+      color 0.22s ease;
+
+    &:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent-line);
+      color: var(--accent-strong);
+    }
+  }
+
+  .hero__meta {
+    color: var(--text-3);
+  }
+
+  i {
+    font-size: 0.95em;
+  }
+}
+
+/*
+   Sidebar / author card
+   ========================================================================== */
+
+.sidebar {
+  .profile_box {
+    @extend .glass-card;
+    padding: 1.35em 1.2em;
+
+    @include breakpoint($large) {
+      padding: 1.6em 1.3em;
+    }
+  }
+
+  p,
+  li {
+    font-family: var(--font-sans);
+    color: var(--text-2);
+  }
+}
+
+.author__avatar {
+  img {
+    padding: 0;
+    border: 0;
+    box-shadow: 0 6px 20px rgba(23, 38, 82, 0.18);
+    transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+    @include breakpoint($large) {
+      padding: 0;
+      border: 0;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.author__name {
+  color: var(--text-1);
+  letter-spacing: -0.01em;
+}
+
+.author__bio {
+  color: var(--text-2);
+  font-size: 0.92em;
+  line-height: 1.55;
+}
+
+.author__urls-wrapper {
+  font-family: var(--font-sans);
+
+  button {
+    border-radius: 999px;
+    border: 1px solid var(--glass-line);
+    background: var(--glass-bg-soft);
+    color: var(--text-1);
+  }
+}
+
+.author__urls {
+  border-color: var(--glass-line);
+  background: var(--glass-bg-strong);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+          backdrop-filter: blur(var(--glass-blur));
+
+  @include breakpoint($large) {
+    background: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+
+  li {
+    color: var(--text-2);
+    font-size: 0.92em;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.2em 0.55em;
+    margin-left: -0.55em;
+    border-radius: var(--radius-sm);
+    color: var(--text-2);
+    transition: color 0.25s ease, background-color 0.25s ease;
+
+    &:hover {
+      color: var(--accent);
+      background: var(--accent-soft);
+      text-decoration: none;
+    }
+  }
+}
+
+.author__urls_sm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  padding: 0;
+  font-size: 1em;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1em;
+    height: 2.1em;
+    border: 1px solid var(--glass-line);
+    border-radius: var(--radius-sm);
+    background: var(--glass-bg-soft);
+    color: var(--text-2);
+    font-size: 1.05em;
+
+    &:hover {
+      color: var(--accent);
+      border-color: var(--accent-line);
+      background: var(--accent-soft);
+      text-decoration: none;
+    }
+  }
+}
+
+/*
+   Page shell and headings
+   ========================================================================== */
+
+#main {
+  margin-top: 1.5em;
+  padding-bottom: 3.5em;
+
+  @include breakpoint($x-large) {
+    max-width: 1120px;
+  }
+}
+
+.page__content {
+  color: var(--text-1);
+
+  h1 {
+    position: relative;
+    margin-top: 1.4em;
+    padding-bottom: 0.45em;
+    border-bottom: 0;
+    color: var(--text-1);
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: -0.012em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 2.6em;
+      height: 3px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+    }
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-line);
+    transition: color 0.2s ease, border-color 0.2s ease,
+      background-color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-strong);
+      border-bottom-color: var(--accent-strong);
+      text-decoration: none;
+    }
+  }
+
+  > p {
+    color: var(--text-2);
+    line-height: 1.7;
+  }
+}
+
+/*
+   Intro paragraph — the block above "News"
+   ========================================================================== */
+
+.intro-card {
+  @extend .glass-card;
+  padding: 1.5em 1.6em;
+  margin-bottom: 0.5em;
+
+  p {
+    margin-bottom: 0.7em;
+    color: var(--text-2);
+    font-size: 1.02em;
+    line-height: 1.75;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*
+   Timelines — News and Educations
+   ========================================================================== */
+
+[id="-news"] + ul {
+  @extend %glass-surface;
+  margin: 1.1em 0 0;
+  padding: 0.6em 1em;
+  border-radius: var(--radius-card);
+  list-style: none;
+
+  > li {
+    position: relative;
+    margin: 0;
+    padding: 0.72em 0.6em;
+    border-radius: var(--radius-sm);
+    color: var(--text-2);
+    line-height: 1.65;
+    transition: background-color 0.25s ease;
+
+    /* Hairline between rows, drawn inside so the hover radius stays clean. */
+    + li {
+      box-shadow: inset 0 1px 0 var(--glass-line);
+    }
+
+    &:hover {
+      background: var(--glass-bg-soft);
+    }
+
+    /* Bolded fragments in the Markdown are the scannable bits. */
+    strong {
+      color: var(--text-1);
+      font-weight: 700;
+    }
+
+    /* The leading *date* from the Markdown becomes the row's anchor. Kept in
+       normal flow on phones; pulled into its own column once there is room,
+       so every row's text starts at the same place. */
+    > em:first-of-type {
+      display: inline-block;
+      margin-right: 0.5em;
+      padding: 0.14em 0.65em;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.86em;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.015em;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    @include breakpoint($small) {
+      padding-left: 7.1em;
+
+      > em:first-of-type {
+        position: absolute;
+        top: 0.82em;
+        left: 0.6em;
+        width: 5.7em;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/*
+   Education — full-width rows: big school lockup, details, dates
+   ========================================================================== */
+
+.edu {
+  margin-top: 0.4em;
+}
+
+.edu__title {
+  @extend .research__title;
+}
+
+.edu__list {
+  margin-top: 1.1em;
+  border-top: 1px solid var(--glass-line);
+}
+
+.edu__row {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr) auto;
+  column-gap: 28px;
+  align-items: center;
+  padding: 20px 4px;
+  border-bottom: 1px solid var(--glass-line);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.edu__logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  height: 60px;
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 184px;
+    max-height: 54px;
+    object-fit: contain;
+  }
+
+  /* Lockups that ship as a white silhouette need flipping for the light theme. */
+  &--mono img {
+    filter: invert(1);
+    opacity: 0.85;
+  }
+}
+
+:root[data-theme="dark"] .edu__logo {
+  img {
+    filter: brightness(1.35) saturate(1.05);
+  }
+
+  &--mono img {
+    filter: none;
+    opacity: 0.92;
+  }
+}
+
+.edu__body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.edu__school {
+  margin: 0;
+  color: var(--text-1);
+  font-size: 1.16em;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent-line);
+    }
+  }
+}
+
+.edu__dept {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 0.94em;
+  line-height: 1.45;
+}
+
+.edu__degree {
+  margin: 0;
+  color: var(--text-3);
+  font-size: 0.88em;
+  line-height: 1.45;
+}
+
+.edu__side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  justify-self: end;
+  text-align: right;
+}
+
+.edu__years {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 0.86em;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.edu__place {
+  margin: 0;
+  color: var(--text-3);
+  font-size: 0.84em;
+  white-space: nowrap;
+}
+
+/* Phones: logo on top, dates under the details. */
+@media (max-width: 37.4375em) {
+  .edu__row {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 10px;
+    padding: 18px 4px;
+  }
+
+  .edu__logo {
+    width: auto;
+    height: 44px;
+
+    img {
+      max-width: 160px;
+      max-height: 40px;
+    }
+  }
+
+  .edu__side {
+    align-items: flex-start;
+    justify-self: start;
+    text-align: left;
+  }
+}
+
+/*
+   Publications
+   ========================================================================== */
+
+.pub-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  margin: 1em 0 1.4em;
+}
+
+.pub-filter__chip {
+  padding: 0.35em 0.85em;
+  border: 1px solid var(--glass-line);
+  border-radius: 999px;
+  background: var(--glass-bg-soft);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: var(--text-2);
+  font-family: var(--font-sans);
+  font-size: 0.84em;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.22s ease, background-color 0.22s ease,
+    border-color 0.22s ease, transform 0.22s ease;
+
+  &:hover {
+    color: var(--accent);
+    border-color: var(--accent-line);
+    transform: translateY(-1px);
+  }
+
+  &.is-active {
+    border-color: transparent;
+    background: var(--accent);
+    color: #fff;
+    box-shadow: var(--glass-shadow-sm);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+:root[data-theme="dark"] .pub-filter__chip.is-active {
+  color: #0a0e16;
+}
+
+.paper-box {
+  @extend .glass-card;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: flex-start;
+  padding: 1.35em;
+  margin-bottom: 1.15em;
+
+  @include breakpoint($medium) {
+    padding: 1.5em;
+  }
+
+  &.is-filtered-out {
+    display: none;
+  }
+
+  .paper-box-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    order: 2;
+
+    > div {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    video {
+      aspect-ratio: 16 / 9;
+    }
+
+    img,
+    video {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--glass-line);
+      box-shadow: var(--glass-shadow-sm);
+      background: var(--glass-bg-soft);
+      transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1),
+        box-shadow 0.45s ease;
+    }
+  }
+
+  &:hover .paper-box-image img,
+  &:hover .paper-box-image video {
+    transform: scale(1.02);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .paper-box-text {
+    order: 1;
+    max-width: 100%;
+    color: var(--text-2);
+
+    p {
+      margin-bottom: 0.55em;
+      line-height: 1.6;
+    }
+
+    /* Title */
+    p:first-of-type strong {
+      display: block;
+      margin-bottom: 0.15em;
+      color: var(--text-1);
+      font-size: 1.12em;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -0.008em;
+    }
+
+    strong u,
+    u {
+      border-bottom-color: var(--accent);
+    }
+  }
+
+  @include breakpoint($medium) {
+    .paper-box-image {
+      justify-content: left;
+      min-width: 200px;
+      max-width: 40%;
+      order: 1;
+    }
+
+    .paper-box-text {
+      justify-content: left;
+      padding-left: 1.6em;
+      max-width: 60%;
+      order: 2;
+    }
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 0.6em;
+  left: 0.6em;
+  margin: 0;
+  padding: 0.28em 0.75em;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background-color: rgba(15, 23, 42, 0.55);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+          backdrop-filter: blur(10px) saturate(160%);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.74em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  white-space: nowrap;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Link row under each paper, turned into chips by glass.js. */
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-top: 0.85em;
+  margin-bottom: 0 !important;
+
+  a {
+    padding: 0.28em 0.75em;
+    border: 1px solid var(--glass-line) !important;
+    border-radius: 999px;
+    background: var(--glass-bg-soft);
+    color: var(--text-2) !important;
+    font-size: 0.86em;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent) !important;
+      border-color: var(--accent-line) !important;
+      background: var(--accent-soft);
+    }
+  }
+}
+
+/*
+   Research — keystone arch
+   ========================================================================== */
+
+.research {
+  margin-top: 0.4em;
+}
+
+.research__title,
+.collab__title {
+  position: relative;
+  margin: 1.4em 0 0;
+  padding-bottom: 0.45em;
+  color: var(--text-1);
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2.6em;
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+  }
+}
+
+.research__intro {
+  margin: 1em 0 0;
+  color: var(--text-2);
+  font-size: 1.02em;
+  line-height: 1.7;
+
+  strong {
+    color: var(--text-1);
+    font-weight: 700;
+  }
+}
+
+.arch {
+  margin-top: 1.4em;
+}
+
+.arch__keystone {
+  @extend %glass-surface;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 1.2em 1.4em;
+  border-color: var(--accent-line);
+  border-radius: var(--radius-card);
+  background: linear-gradient(
+      180deg,
+      var(--accent-soft),
+      transparent 70%
+    ),
+    var(--glass-bg);
+  text-align: center;
+}
+
+/* The bracket that ties the keystone to the pillars: a stub down from the
+   keystone, then a bar that splits into one arm per pillar. */
+.arch__link {
+  position: relative;
+  width: 50%;
+  height: 30px;
+  margin: 0 auto;
+  border: 1px solid var(--glass-line);
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    width: 1px;
+    height: 14px;
+    background: var(--glass-line);
+  }
+}
+
+.arch__pillars {
+  display: grid;
+  grid-template-columns: repeat(var(--pillars, 2), minmax(0, 1fr));
+  gap: 0.9em;
+}
+
+.arch__pillar {
+  @extend %glass-surface;
+  padding: 1.15em 1.3em;
+  border-radius: var(--radius-card);
+}
+
+.arch__label {
+  display: block;
+  margin-bottom: 0.35em;
+  color: var(--text-3);
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.arch__heading {
+  margin: 0 0 0.4em;
+  color: var(--text-1);
+  font-size: 1.08em;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.008em;
+}
+
+.arch__text {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 0.93em;
+  line-height: 1.6;
+}
+
+/* Phones: stack the pillars and drop the bracket to a single spine. */
+@media (max-width: 37.4375em) {
+  .arch__pillars {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .arch__link {
+    width: 1px;
+    height: 26px;
+    border: 0;
+    border-radius: 0;
+    background: var(--glass-line);
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+/*
+   Collaborators
+   ========================================================================== */
+
+.collab {
+  margin-top: 1.6em;
+}
+
+.collab__title {
+  position: relative;
+  margin: 1.4em 0 0;
+  padding-bottom: 0.45em;
+  color: var(--text-1);
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2.6em;
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+  }
+}
+
+.collab__group {
+  margin: 1.3em 0 0.7em;
+  color: var(--text-3);
+  font-size: 0.82em;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.collab__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 0.75em;
+}
+
+.collab__card {
+  @extend %glass-surface;
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  padding: 0.85em 0.95em;
+  border-radius: var(--radius-card);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-line);
+    box-shadow: var(--glass-shadow-lg);
+    text-decoration: none;
+
+    .collab__name {
+      color: var(--accent);
+    }
+  }
+}
+
+.collab__avatar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.92em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.collab__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.collab__name {
+  color: var(--text-1);
+  font-size: 0.97em;
+  font-weight: 700;
+  line-height: 1.3;
+  transition: color 0.25s ease;
+}
+
+.collab__role {
+  color: var(--text-2);
+  font-size: 0.82em;
+  line-height: 1.4;
+}
+
+.collab__meta {
+  color: var(--text-3);
+  font-size: 0.78em;
+  line-height: 1.4;
+}
+
+/*
+   Scroll reveal — class is added by glass.js, so no-JS visitors are unaffected
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/*
+   Back to top
+   ========================================================================== */
+
+.to-top {
+  @extend %glass-surface;
+  position: fixed;
+  right: 1.25em;
+  bottom: 1.25em;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7em;
+  height: 2.7em;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--glass-bg-strong);
+  color: var(--text-2);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s,
+    color 0.25s ease, border-color 0.25s ease;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  &:hover {
+    color: var(--accent);
+    border-color: var(--accent-line);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+/*
+   Motion and print preferences
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .glass-card,
+  .paper-box,
+  .profile_box,
+  .intro-card {
+    transition: none !important;
+
+    &:hover {
+      transform: none !important;
+    }
+  }
+
+  .glass-card::before {
+    display: none;
+  }
+}
+
+@media print {
+  .theme-toggle,
+  .to-top,
+  .pub-filter {
+    display: none !important;
+  }
+
+  .glass-card,
+  .paper-box,
+  .profile_box,
+  .intro-card {
+    border: 1px solid #ddd !important;
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+}

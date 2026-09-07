@@ -1,0 +1,32 @@
+{% if site.data.collaborators and site.data.collaborators.size > 0 %}
+<section class="collab" id="collaborators">
+  <h1 class="collab__title">🤝 Collaborators</h1>
+
+  {% for block in site.data.collaborators %}
+    {% if block.people and block.people.size > 0 %}
+      <h2 class="collab__group">{{ block.group }}</h2>
+      <div class="collab__grid" role="list">
+        {% for person in block.people %}
+          {% assign words = person.name | split: " " %}
+          {% capture initials %}{% for w in words limit: 2 %}{{ w | slice: 0 }}{% endfor %}{% endcapture %}
+
+          {% if person.url %}<a class="collab__card" href="{{ person.url }}" role="listitem">{% else %}<div class="collab__card" role="listitem">{% endif %}
+            <span class="collab__avatar{% unless person.photo %} collab__avatar--initials{% endunless %}">
+              {% if person.photo %}
+                <img src="{{ person.photo }}" alt="{{ person.name }}" loading="lazy">
+              {% else %}
+                {{ initials | upcase }}
+              {% endif %}
+            </span>
+            <span class="collab__info">
+              <span class="collab__name">{{ person.name }}</span>
+              {% if person.role %}<span class="collab__role">{{ person.role }}</span>{% endif %}
+              {% if person.affiliation %}<span class="collab__meta">{{ person.affiliation }}</span>{% endif %}
+            </span>
+          {% if person.url %}</a>{% else %}</div>{% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</section>
+{% endif %}

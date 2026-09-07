@@ -24,6 +24,19 @@ author:
   name             : "Rui Li (李锐)"
   avatar           : "images/myphoto.jpg"
   bio              : "Harbin Institute of Technology & Shanghai AI Laboratory Joint Ph.D. Student"
+  tagline          : "AI for Science (AI4SCI) · Embodied AI"
+  affiliations:
+    - name   : "Harbin Institute of Technology"
+      role   : "Ph.D. Student"
+      period : "2025.09 - Present"
+      logo   : "images/logo-hit.png"
+      url    : "https://www.hit.edu.cn/"
+    - name   : "Shanghai AI Laboratory"
+      role   : "Research Intern"
+      period : "2024.09 - Present"
+      logo   : "images/logo-shlab.png"
+      logo_mono : true          # white silhouette: inverted for the light theme
+      url    : "https://www.shlab.org.cn/"
   location         : "China"
   employer         : 
   pubmed           : 

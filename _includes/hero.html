@@ -1,0 +1,100 @@
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+{% endif %}
+
+<header class="hero" itemscope itemtype="http://schema.org/Person">
+  <div class="hero__main">
+    <div class="hero__text">
+      <h1 class="hero__name" itemprop="name">
+        {% if author.name contains "(" %}
+          {% assign name_parts = author.name | split: "(" %}
+          {{ name_parts[0] | strip }} <span class="hero__name-alt">({{ name_parts[1] }}</span>
+        {% else %}
+          {{ author.name }}
+        {% endif %}
+      </h1>
+
+      {% if author.affiliations %}
+        <ul class="hero__affiliations">
+          {% for affiliation in author.affiliations %}
+            <li>
+              {% if affiliation.logo %}
+                <span class="hero__logo{% if affiliation.logo_mono %} hero__logo--mono{% endif %}">
+                  <img src="{{ affiliation.logo }}" alt="{{ affiliation.name }} logo" loading="lazy">
+                </span>
+              {% else %}
+                <span class="hero__logo hero__logo--none"><i class="fas fa-university" aria-hidden="true"></i></span>
+              {% endif %}
+              <span class="hero__org">
+                {% if affiliation.url %}
+                  <a href="{{ affiliation.url }}">{{ affiliation.name | default: affiliation }}</a>
+                {% else %}
+                  {{ affiliation.name | default: affiliation }}
+                {% endif %}
+              </span>
+              {% if affiliation.role %}
+                <span class="hero__role">{{ affiliation.role }}</span>
+              {% endif %}
+              {% if affiliation.period %}
+                <span class="hero__period">{{ affiliation.period }}</span>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% elsif author.bio %}
+        <ul class="hero__affiliations">
+          <li>
+            <span class="hero__logo hero__logo--none"><i class="fas fa-university" aria-hidden="true"></i></span>
+            <span class="hero__org">{{ author.bio }}</span>
+          </li>
+        </ul>
+      {% endif %}
+
+      {% if author.tagline %}
+        <p class="hero__tagline">{{ author.tagline }}</p>
+      {% endif %}
+
+      <!-- The intro paragraphs from the page body are moved in here by glass.js. -->
+      <div class="hero__bio" data-hero-bio></div>
+    </div>
+
+    {% if author.avatar %}
+      <div class="hero__portrait">
+        <img src="{{ author.avatar }}" alt="{{ author.name }}" itemprop="image">
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="hero__links">
+    {% if author.email %}
+      <a href="mailto:{{ author.email }}"><i class="fas fa-envelope" aria-hidden="true"></i> {{ author.email }}</a>
+    {% endif %}
+    {% if author.googlescholar %}
+      <a href="{{ author.googlescholar }}"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
+    {% endif %}
+    {% if author.github %}
+      <a href="https://github.com/{{ author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+    {% endif %}
+    {% if author.uri %}
+      <a href="{{ author.uri }}"><i class="fas fa-link" aria-hidden="true"></i> Website</a>
+    {% endif %}
+    {% if author.orcid %}
+      <a href="{{ author.orcid }}"><i class="ai ai-orcid" aria-hidden="true"></i> ORCID</a>
+    {% endif %}
+    {% if author.dblp %}
+      <a href="{{ author.dblp }}"><i class="ai ai-dblp" aria-hidden="true"></i> DBLP</a>
+    {% endif %}
+    {% if author.linkedin %}
+      <a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+    {% endif %}
+    {% if author.twitter %}
+      <a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a>
+    {% endif %}
+    {% if author.researchgate %}
+      <a href="{{ author.researchgate }}"><i class="fab fa-researchgate" aria-hidden="true"></i> ResearchGate</a>
+    {% endif %}
+    {% if author.location %}
+      <span class="hero__meta"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ author.location }}</span>
+    {% endif %}
+  </div>
+</header>

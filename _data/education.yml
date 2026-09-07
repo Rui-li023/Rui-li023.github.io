@@ -1,0 +1,31 @@
+# The Education section: one full-width row per entry.
+#
+# Each row is [ logo | school / department / degree | years + place ].
+# Fields, all optional except `school`:
+#   logo      - full lockup, e.g. "images/logo-hit-wide.png"
+#   logo_mono - true when the lockup is a white silhouette, so the light
+#               theme inverts it (the Shanghai AI Lab mark is one)
+#   url       - links the school name
+#   department, degree, years, place
+#
+# Set `enabled: false` to hide the section.
+# Editing this file does NOT require restarting `jekyll serve`.
+
+enabled: true
+
+entries:
+  - school: "Harbin Institute of Technology"
+    url: "https://www.hit.edu.cn/"
+    logo: "images/logo-hit-wide.png"
+    department: "Joint Ph.D. Program with Shanghai AI Laboratory"
+    degree: "Ph.D. Student"
+    years: "2025.09 - Present"
+    place: "China"
+
+  - school: "Central South University"
+    url: "https://www.csu.edu.cn/"
+    logo: "images/logo-csu-wide.png"
+    department: "Computer Science and Engineering"
+    degree: "Bachelor's Degree"
+    years: "2021.09 - 2025.07"
+    place: "Changsha, China"

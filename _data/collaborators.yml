@@ -1,0 +1,58 @@
+# Collaborators shown at the bottom of the homepage.
+#
+# Cards show: photo (or initials) + name + school.
+# Fields, all optional except `name`:
+#   affiliation - the school; left blank when it could not be confirmed
+#   url         - homepage; without it the card is plain text, not a link
+#   photo       - "images/collaborators/foo.jpg"; without it, initials
+#   role        - supported by the template but deliberately unused here
+#
+# Schools come from the author affiliations printed in the papers themselves
+# (arXiv 2505.22634 / 2605.02288 / 2604.05484 / 2412.10834), or from the
+# person's own homepage. Photos are taken from each person's own homepage.
+#
+# Editing this file does NOT require restarting `jekyll serve`.
+
+- group: "Supervisors"
+  people:
+    - name: "Wangmeng Zuo"
+      affiliation: "Harbin Institute of Technology"
+      url: "https://homepage.hit.edu.cn/wangmengzuo"
+      photo: "images/collaborators/wangmeng-zuo.jpg"
+    - name: "Dongzhan Zhou"
+      affiliation: "Shanghai AI Laboratory"
+      url: "https://scholar.google.com/citations?user=Ox6SxpoAAAAJ"
+      photo: "images/collaborators/dongzhan-zhou.jpg"
+
+- group: "Collaborators"
+  people:
+    - name: "Zixuan Hu"
+      affiliation: "Peking University"
+    - name: "Yiran Qin"
+      affiliation: "CUHK, Shenzhen"
+      url: "https://iranqin.github.io/"
+      photo: "images/collaborators/yiran-qin.jpg"
+    - name: "Li Kang"
+      affiliation: "Shanghai Jiao Tong University"
+      url: "https://faceong.github.io/"
+      photo: "images/collaborators/li-kang.jpg"
+    - name: "Yutao Fan"
+      affiliation: "Harbin Institute of Technology"
+      url: "https://ffanyt.github.io/"
+      photo: "images/collaborators/yutao-fan.jpg"
+    - name: "Heng Zhou"
+      affiliation: "University of Science and Technology of China"
+    - name: "Chenxi Li"
+      affiliation: "Shanghai AI Laboratory"
+    - name: "Zhangrui Zhao"
+      affiliation: "Beihang University"
+      url: "https://scholar.google.com/citations?user=_0mU4IrBYj4C"
+      photo: "images/collaborators/zhangrui-zhao.jpg"
+    - name: "Jiaxu Li"
+      affiliation: "Central South University"
+
+# Still without a link or photo: Zixuan Hu, Heng Zhou, Chenxi Li, Jiaxu Li.
+# Google Scholar was searched for each; every candidate profile turned out to
+# be a different person with the same name (checked against the shared papers),
+# so nothing was attached. Heng Zhou's henggg.cn is a private GitHub Pages
+# site that shows a login wall to visitors, so it is not linked either.

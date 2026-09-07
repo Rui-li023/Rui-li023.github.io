@@ -1,0 +1,31 @@
+{% assign edu = site.data.education %}
+{% if edu and edu.enabled and edu.entries and edu.entries.size > 0 %}
+<section class="edu" id="educations">
+  <h1 class="edu__title">📖 Educations</h1>
+
+  <div class="edu__list">
+    {% for item in edu.entries %}
+      <div class="edu__row">
+        <div class="edu__logo{% if item.logo_mono %} edu__logo--mono{% endif %}">
+          {% if item.logo %}
+            <img src="{{ item.logo }}" alt="{{ item.school }}" loading="lazy">
+          {% endif %}
+        </div>
+
+        <div class="edu__body">
+          <h3 class="edu__school">
+            {% if item.url %}<a href="{{ item.url }}">{{ item.school }}</a>{% else %}{{ item.school }}{% endif %}
+          </h3>
+          {% if item.department %}<p class="edu__dept">{{ item.department }}</p>{% endif %}
+          {% if item.degree %}<p class="edu__degree">{{ item.degree }}</p>{% endif %}
+        </div>
+
+        <div class="edu__side">
+          {% if item.years %}<p class="edu__years">{{ item.years }}</p>{% endif %}
+          {% if item.place %}<p class="edu__place">{{ item.place }}</p>{% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
