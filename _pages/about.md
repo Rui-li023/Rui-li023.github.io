@@ -39,7 +39,8 @@ My research interest includes neural machine translation and computer vision. I 
 †: Corresponding Author , \*: Equal Contribution
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report</div><video class="paper-media" data-src='images/n0-foundation.mp4' poster='images/n0-foundation.webp' muted loop playsinline preload="none" aria-label="n0-foundation cover"></video></div></div>
+<div class='paper-box'>
+{% include paper-media.html name="N0-Foundation" badge="Tech Report" alt="N0-Foundation tactile manipulation data collected across multiple robot embodiments" poster="images/publications/n0-foundation.webp" video="images/publications/n0-foundation.mp4" %}
 <div class='paper-box-text' markdown="1">
 
 **N₀-Foundation: Towards the Age of Tactile Intelligence**
@@ -55,7 +56,8 @@ A tactile-centric foundation for embodied manipulation that unifies scalable tac
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report</div><video class="paper-media" data-src='images/n0-vtla.mp4' poster='images/n0-vtla.webp' muted loop playsinline preload="none" aria-label="n0-vtla cover"></video></div></div>
+<div class='paper-box'>
+{% include paper-media.html name="N0-VTLA" badge="Tech Report" alt="N0-VTLA robot performing contact-rich kitchen manipulation" poster="images/publications/n0-vtla.webp" video="images/publications/n0-vtla.mp4" %}
 <div class='paper-box-text' markdown="1">
 
 **N₀-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens**
@@ -71,7 +73,8 @@ A vision-tactile-language-action foundation model for contact-rich manipulation 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report</div><video class="paper-media" data-src='images/n0-twam.mp4' poster='images/n0-twam.png' muted loop playsinline preload="none" aria-label="n0-twam cover"></video></div></div>
+<div class='paper-box'>
+{% include paper-media.html name="N0-TWAM" badge="Tech Report" alt="N0-TWAM robot arm performing a long-horizon object transfer task" poster="images/publications/n0-twam.webp" video="images/publications/n0-twam.mp4" %}
 <div class='paper-box-text' markdown="1">
 
 **N₀-TWAM: Scaling Tactile-Native World Action Model for Contact-Rich Manipulation**
@@ -117,7 +120,8 @@ Li Kang, Yutao Fan, **<u>Rui Li</u>**, Heng Zhou, Yiran Qin, Zhemeng Zhang, Song
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/labrobfail.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'>
+{% include paper-media.html name="LabRobFail" badge="Preprint" alt="LabRobFail benchmark showing injected robot failure cases in a chemical self-driving laboratory" poster="images/publications/labrobfail.webp" small="images/publications/labrobfail-400.webp" original="images/labrobfail.png" width="800" height="331" %}
 <div class='paper-box-text' markdown="1">
 
 **LabRobFail: A Benchmark for Robotic Failure Analysis in Chemical Self-driving Laboratory**
@@ -131,7 +135,8 @@ Haobo Wang\*, Baoli Sun\*, Anqi Zou, Dongsheng Huang, Zelin Lv, Ning Wang, **<u>
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/labvla.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'>
+{% include paper-media.html name="LabVLA" badge="Preprint" alt="LabVLA vision-language-action framework grounded in laboratory embodied data" poster="images/publications/labvla.webp" small="images/publications/labvla-400.webp" original="images/labvla.png" width="800" height="425" %}
 <div class='paper-box-text' markdown="1">
 
 **LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories**
@@ -191,7 +196,8 @@ Jiaxu Li*, **<u>Rui Li*</u>**, Jianyu Qi, Songning Lai, Linpu Lv, Kejia Fan, Jia
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/position-isl.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'>
+{% include paper-media.html name="Position: Intelligent Science Laboratory" badge="Preprint" alt="Intelligent science laboratory integrating cognitive agents with embodied perception, manipulation and navigation" poster="images/publications/position-isl.webp" small="images/publications/position-isl-400.webp" original="images/position-isl.png" width="800" height="525" %}
 <div class='paper-box-text' markdown="1">
 
 **Position: Intelligent Science Laboratory Requires the Integration of Cognitive and Embodied AI**
