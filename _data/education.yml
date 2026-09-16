@@ -29,3 +29,10 @@ entries:
     degree: "Bachelor's Degree"
     years: "2021.09 - 2025.07"
     place: "Changsha, China"
+
+  - school: "Shenzhen Middle School"
+    url: "https://www.shenzhong.net/"
+    logo: "images/logo-szms.png"
+    degree: "High School"
+    years: "2018.09 - 2021.06"
+    place: "Shenzhen, China"
