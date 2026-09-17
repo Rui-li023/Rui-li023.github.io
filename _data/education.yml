@@ -32,7 +32,7 @@ entries:
 
   - school: "Shenzhen Middle School"
     url: "https://www.shenzhong.net/"
-    logo: "images/logo-szms.png"
+    logo: "images/logo-szms-wide.png"
     degree: "High School"
     years: "2018.09 - 2021.06"
     place: "Shenzhen, China"
