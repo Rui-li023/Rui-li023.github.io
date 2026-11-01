@@ -39,41 +39,6 @@ My research interest includes neural machine translation and computer vision. I 
 †: Corresponding Author , \*: Equal Contribution
 
 <div class='paper-box'>
-{% include paper-media.html name="RoboChemGym" badge="Preprint" alt="RoboChemGym protocol-driven simulation and hierarchical benchmark for long-horizon chemical manipulation" poster="images/publications/robochemgym.webp" small="images/publications/robochemgym-400.webp" original="images/robochemgym.png" width="800" height="331" %}
-<div class='paper-box-text' markdown="1">
-
-**RoboChemGym: A Protocol-Driven Generative Simulation Framework for Long-Horizon Chemical Manipulation**
-
-Chenxi Li, Haiyuan Wan, **<u>Rui Li</u>**, Jingyuan Li, Sha Zhang, Bohan Feng, Jianbao Cao, Zhangrui Zhao, Di Hu, Wangmeng Zuo, Shixiang Tang, Minting Pan†, Dongzhan Zhou†
-
-**Preprint, 2026**
-
-A protocol-driven simulation framework that generates long-horizon chemical manipulation demonstrations through self-improving task synthesis, with a hierarchical benchmark spanning atomic operations to full experimental workflows.
-
-[ArXiv](https://arxiv.org/abs/2610.02708)
-
-</div>
-</div>
-
-<div class='paper-box'>
-{% include paper-media.html name="RoboBridge" badge="Preprint" alt="RoboBridge self-evolving embodied agent framework for transferring executable skills from simulation to real robots" poster="images/publications/robobridge.webp" small="images/publications/robobridge-400.webp" original="images/robobridge.png" width="800" height="396" %}
-<div class='paper-box-text' markdown="1">
-
-**RoboBridge: A Self-Evolving Embodied Agent Framework for Sim-to-Real Transfer**
-
-Chenxi Li, Zhangrui Zhao, **<u>Rui Li</u>**, Yuan Gao, Kehui Liu, Jiarui Li, Dong Wang, Tong Si, Minting Pan, Wanli Ouyang, Dongzhan Zhou†
-
-**Preprint, 2026**
-
-A self-evolving embodied agent that transfers executable task skills from simulation to real robots, refining procedures through interaction feedback and using a pretrained VLA policy as a reusable action tool.
-
-[ArXiv](https://arxiv.org/abs/2610.02717)
-
-</div>
-</div>
-
-
-<div class='paper-box'>
 {% include paper-media.html name="N0-Foundation" badge="Tech Report" alt="N0-Foundation tactile manipulation data collected across multiple robot embodiments" poster="images/publications/n0-foundation.webp" video="images/publications/n0-foundation.mp4" %}
 <div class='paper-box-text' markdown="1">
 
@@ -150,6 +115,40 @@ Li Kang, Yutao Fan, **<u>Rui Li</u>**, Heng Zhou, Yiran Qin, Zhemeng Zhang, Song
 **Preprint, 2026**
 
 [ArXiv](https://arxiv.org/abs/2604.05484) \| [Website](https://faceong.github.io/CoEnv/)
+
+</div>
+</div>
+
+<div class='paper-box'>
+{% include paper-media.html name="RoboChemGym" badge="Preprint" alt="RoboChemGym protocol-driven simulation and hierarchical benchmark for long-horizon chemical manipulation" poster="images/publications/robochemgym.webp" small="images/publications/robochemgym-400.webp" original="images/robochemgym.png" width="800" height="331" %}
+<div class='paper-box-text' markdown="1">
+
+**RoboChemGym: A Protocol-Driven Generative Simulation Framework for Long-Horizon Chemical Manipulation**
+
+Chenxi Li, Haiyuan Wan, **<u>Rui Li</u>**, Jingyuan Li, Sha Zhang, Bohan Feng, Jianbao Cao, Zhangrui Zhao, Di Hu, Wangmeng Zuo, Shixiang Tang, Minting Pan†, Dongzhan Zhou†
+
+**Preprint, 2026**
+
+A protocol-driven simulation framework that generates long-horizon chemical manipulation demonstrations through self-improving task synthesis, with a hierarchical benchmark spanning atomic operations to full experimental workflows.
+
+[ArXiv](https://arxiv.org/abs/2610.02708)
+
+</div>
+</div>
+
+<div class='paper-box'>
+{% include paper-media.html name="RoboBridge" badge="Preprint" alt="RoboBridge self-evolving embodied agent framework for transferring executable skills from simulation to real robots" poster="images/publications/robobridge.webp" small="images/publications/robobridge-400.webp" original="images/robobridge.png" width="800" height="396" %}
+<div class='paper-box-text' markdown="1">
+
+**RoboBridge: A Self-Evolving Embodied Agent Framework for Sim-to-Real Transfer**
+
+Chenxi Li, Zhangrui Zhao, **<u>Rui Li</u>**, Yuan Gao, Kehui Liu, Jiarui Li, Dong Wang, Tong Si, Minting Pan, Wanli Ouyang, Dongzhan Zhou†
+
+**Preprint, 2026**
+
+A self-evolving embodied agent that transfers executable task skills from simulation to real robots, refining procedures through interaction feedback and using a pretrained VLA policy as a reusable action tool.
+
+[ArXiv](https://arxiv.org/abs/2610.02717)
 
 </div>
 </div>
