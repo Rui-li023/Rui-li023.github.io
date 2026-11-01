@@ -129,8 +129,6 @@ Chenxi Li, Haiyuan Wan, **<u>Rui Li</u>**, Jingyuan Li, Sha Zhang, Bohan Feng, J
 
 **Preprint, 2026**
 
-A protocol-driven simulation framework that generates long-horizon chemical manipulation demonstrations through self-improving task synthesis, with a hierarchical benchmark spanning atomic operations to full experimental workflows.
-
 [ArXiv](https://arxiv.org/abs/2610.02708)
 
 </div>
@@ -145,8 +143,6 @@ A protocol-driven simulation framework that generates long-horizon chemical mani
 Chenxi Li, Zhangrui Zhao, **<u>Rui Li</u>**, Yuan Gao, Kehui Liu, Jiarui Li, Dong Wang, Tong Si, Minting Pan, Wanli Ouyang, Dongzhan Zhou†
 
 **Preprint, 2026**
-
-A self-evolving embodied agent that transfers executable task skills from simulation to real robots, refining procedures through interaction feedback and using a pretrained VLA policy as a reusable action tool.
 
 [ArXiv](https://arxiv.org/abs/2610.02717)
 
