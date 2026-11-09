@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I graduated from **Central South University** with a degree in Computer Science and Technology. I am currently a first-year **joint Ph.D. student** at **Harbin Institute of Technology** and [**Shanghai AI Laboratory**](https://www.shlab.org.cn/), supervised by [**Wangmeng Zuo**](https://homepage.hit.edu.cn/wangmengzuo) and [**Dongzhan Zhou**](https://scholar.google.com/citations?user=Ox6SxpoAAAAJ). My primary research interests lie in **AI for Science (AI4SCI)** and **Embodied AI**.
+I graduated from **Central South University** with a degree in Computer Science and Technology. I am currently a second-year **joint Ph.D. student** at **Harbin Institute of Technology** and [**Shanghai AI Laboratory**](https://www.shlab.org.cn/), supervised by [**Wangmeng Zuo**](https://homepage.hit.edu.cn/wangmengzuo) and [**Dongzhan Zhou**](https://scholar.google.com/citations?user=Ox6SxpoAAAAJ). My research focuses on **Embodied AI**.
 
 If you are interested in connecting or discussing potential collaborations, feel free to email me.
 
@@ -32,7 +32,7 @@ My research interest includes neural machine translation and computer vision. I 
 - *2025.09*: &nbsp;🎉🎉 Our paper **"LabUtopia"** is accepted by **NeurIPS 2025**!
 - *2025.07*: &nbsp;🎉🎉 Our paper **"CFSSeg"** is accepted by **ACM MM 2025**!
 - *2024.10*: &nbsp;🎉🎉 My **first paper** is accepted by **BIBM 2024**.
-- *2024.09*: &nbsp;🎉🎉 Excited to join the **Shanghai AI Laboratory** as a Ph.D. student in **AI4Science**.
+- *2024.09*: &nbsp;🎉🎉 Excited to join the **Shanghai AI Laboratory** as a Ph.D. student working on **Embodied AI**.
 
 # 📝 Publications 
 

@@ -7,12 +7,13 @@
 
 # Site Settings
 title                    : "Rui Li's Homepage"
-description              : "Graduated from Central South University with a degree in Computer Science and Technology. Currently a first-year joint Ph.D. student at Harbin Institute of Technology and Shanghai AI Laboratory."
+description              : "Graduated from Central South University with a degree in Computer Science and Technology. Currently a second-year joint Ph.D. student at Harbin Institute of Technology and Shanghai AI Laboratory, working on Embodied AI."
 repository               : "Rui-li023/Rui-li023.github.io"
 google_scholar_stats_use_cdn : false
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
+busuanzi_enabled         : true
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
@@ -24,10 +25,10 @@ author:
   name             : "Rui Li (李锐)"
   avatar           : "images/myphoto.jpg"
   bio              : "Harbin Institute of Technology & Shanghai AI Laboratory Joint Ph.D. Student"
-  tagline          : "AI for Science (AI4SCI) · Embodied AI"
+  tagline          : "Embodied AI"
   affiliations:
     - name   : "Harbin Institute of Technology"
-      role   : "Ph.D. Student"
+      role   : "Second-year Ph.D. Student"
       period : "2025.09 - Present"
       logo   : "images/logo-hit.png"
       url    : "https://www.hit.edu.cn/"

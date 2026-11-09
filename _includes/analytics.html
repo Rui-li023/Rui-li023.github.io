@@ -1,5 +1,6 @@
 {% if page.analytics != false %}
 
+{% if site.google_analytics_id %}
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
 <script>
@@ -9,5 +10,11 @@
 
   gtag('config', "{{ site.google_analytics_id }}");
 </script>
+{% endif %}
+
+{% if site.busuanzi_enabled %}
+<!-- Lightweight visitor counter for static GitHub Pages sites. -->
+<script src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+{% endif %}
 
 {% endif %}

@@ -96,5 +96,13 @@
     {% if author.location %}
       <span class="hero__meta"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ author.location }}</span>
     {% endif %}
+    {% if site.busuanzi_enabled %}
+      <span class="hero__meta" aria-live="polite">
+        <i class="fas fa-users" aria-hidden="true"></i>
+        <span>Visitors <strong id="busuanzi_site_uv">—</strong></span>
+        <span aria-hidden="true">·</span>
+        <span>Views <strong id="busuanzi_site_pv">—</strong></span>
+      </span>
+    {% endif %}
   </div>
 </header>
